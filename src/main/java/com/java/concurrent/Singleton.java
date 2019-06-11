@@ -8,7 +8,8 @@ package com.java.concurrent;
 public class Singleton {
 
 
-    private Singleton(){}
+    private Singleton() {
+    }
 
 
     private static volatile Singleton singleton;
@@ -18,7 +19,7 @@ public class Singleton {
 
         if (singleton == null) {
 
-            synchronized (Singleton.class){
+            synchronized (Singleton.class) {
 
                 if (singleton == null) {
 
@@ -34,7 +35,7 @@ public class Singleton {
     }
 
 
-    public static void main(String[] arg){
+    public static void main(String[] arg) {
 
         System.out.println(Singleton.getSingletonInstance());
 
